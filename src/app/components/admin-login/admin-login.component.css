@@ -1,0 +1,62 @@
+/* Bordered form */
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color:  rgb(30, 30, 131);
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.header{
+  padding: 75px 50px 75px 100px;
+  text-align: center;
+  text-decoration: solid;
+  font-family:Arial, Helvetica, sans-serif;
+  color: orange;
+}
+
+.label{
+  text-decoration: solid;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(30, 30, 131);
+}
+
+/* Add padding to containers */
+.container {
+  padding: 25px 50px 75px 100px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  margin-top: 50px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

@@ -1,0 +1,41 @@
+<h2>Admin Dashboard</h2>
+<input
+type="text"
+ngModel="searchRollNumber"
+(input)="filterStudents()"
+(keydown)="filterStudentsOnEnter($event)"
+placeholder="Search by Roll Number"
+/>
+<table>
+  <tr>
+    <th>Roll Number</th>
+    <th>Name</th>
+    <th>Loan ID</th>
+    <th>Semester</th>
+    <th>Amount Received</th>
+    <th>Bank Reference No</th>
+    <th>Date of Receipt</th>
+    <th>Loan Received</th>
+    <th>Actions</th>
+  </tr>
+  @for (student of selectedStudent; track student.loanId) {
+  <tr>
+
+    <td>{{ student.rollNumber }}</td>
+    <td>{{ student.name}}</td>
+    <td>{{ student.loanId }}</td>
+    <td>{{ student.semester }}</td>
+    <td>{{ student.amountReceived }}</td>
+    <td>{{ student.bankReferenceNo }}</td>
+    <td>{{ student.dateOfReceipt }}</td>
+    <td>{{ student.status }}</td>
+    <td>{{ student.status === 'approved' ? 'Yes' : 'No' }}
+      <label class="toggle-switch">
+        <input type="checkbox" [checked]="student.status === 'approved'" (change)="toggleStatus(student)">
+        <span class="slider"></span>
+      </label>
+    </td>
+  </tr>
+}
+</table>
+<button class="button" (click)="downloadLoanData()">Download Loan Data</button>

@@ -1,0 +1,15 @@
+<h1 class="header">Admin Login</h1>
+<form (ngSubmit)="login()">
+  <div class="imgcontainer">
+    <img src="../../../assets/admin_avatar.png" alt="Avatar">
+  </div>
+  <div class="container">
+  <label class="label" for="employeeId"><b>Employee ID:</b></label>
+  <input type="text" id="employeeId" placeholder="Enter Your Unique Employee ID" [(ngModel)]="employeeId" name="employeeId" required>
+
+  <label class="label" for="dob"><b>Password</b></label>
+  <input type="password" id="dob" placeholder="Enter Date of Birth" [(ngModel)]="dob" name="dob" required>
+
+  <button class="button" type="submit">Login</button>
+  </div>
+</form>

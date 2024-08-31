@@ -1,0 +1,66 @@
+<div class="dashboard-container">
+  <h2 class="welcome-message">Welcome, {{ studentData.name }}!</h2>
+
+  <div class="student-info">
+    <h3>Your Information</h3>
+    <p><strong>Roll Number:</strong> {{ rollNumber }}</p>
+    <p><strong>Date of Birth:</strong> {{ studentData.dob }}</p>
+    <p><strong>Email:</strong> {{ studentData.email }}</p>
+  </div>
+
+  <div class="loan-info">
+    <h3>Your Loans</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Loan ID</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>bankReferenceNo</th>
+          <th>Semester</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (student of studentData.loans; track student.loanId) {
+        <tr>
+          <td>{{student.loanId}}</td>
+          <td>{{student.amount}}</td>
+          <td>{{student.dateOfReceipt}}</td>
+          <td>{{student.status}}</td>
+          <td>{{student.bankReferenceNo}}</td>
+          <td>{{student.semester}}</td>
+          <td>
+            <button (click)="editLoan(studentData.loans)">Edit</button>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="loan-update" >
+  @if (selectedLoan){
+    <h3>Update Loan Details</h3>
+    <form (ngSubmit)="submitLoanDetails()">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" ngModel="selectedLoan.amount" name="amount" required>
+      <label for="bankReferenceNo">Bank Reference No:</label>
+      <input type="text" id="bankReferenceNo" ngModel="selectedLoan.bankReferenceNo" name="bankReferenceNo" required>
+
+      <label for="semester">Semester:</label>
+      <input type="text" id="semester" ngModel="selectedLoan.semester" name="semester" required>
+
+      <label for="dateOfReceipt">Date of Receipt:</label>
+      <input type="date" id="dateOfReceipt" ngModel="selectedLoan.dateOfReceipt" name="dateOfReceipt" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    }
+    @if (submissionStatus){
+      <p>{{submissionStatus}}</p>
+  }
+
+</div>

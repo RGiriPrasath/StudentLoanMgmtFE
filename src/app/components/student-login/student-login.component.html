@@ -1,0 +1,18 @@
+<h2 class="header">Student Login</h2>
+<form (ngSubmit)="login()">
+  <div class="imgcontainer">
+    <img src="../../../assets/student-avatar.png" alt="Avatar">
+  </div>
+  <div class="container">
+
+  <div>
+    <label class="label" for="rollNumber"><b>User Name:</b></label>
+    <input type="text" id="rollNumber" placeholder="Enter Your Unique 6 digit Roll Number" [(ngModel)]="rollNumber" name="rollNumber" required >
+  </div>
+  <div>
+    <label class="label" for="dob"><b>Password:</b></label>
+    <input type="password" id="dob" placeholder="Enter Date of Birth" [(ngModel)]="dob" name="dob" required >
+  </div>
+  <button class="button" type="submit">Login</button>
+</div>
+</form>

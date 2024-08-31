@@ -1,0 +1,190 @@
+/* Style for the entire table */
+table {
+  width: 100%; /* Make the table take up the full width of its container */
+  border-collapse: collapse; /* Ensure no spacing between cells */
+  margin: 20px 0; /* Add some space above and below the table */
+  font-size: 16px; /* Set a standard font size */
+  font-family: Arial, sans-serif; /* Use a clean, modern font */
+  text-align: left; /* Align text to the left */
+}
+
+/* Style for table headers */
+th {
+  background-color: #4CAF50; /* Set a background color for the headers */
+  color: white; /* Make the text color white for contrast */
+  padding: 12px 15px; /* Add padding inside each header cell */
+}
+
+/* Style for table cells */
+td {
+  padding: 12px 15px; /* Add padding inside each cell */
+  border-bottom: 1px solid #ddd; /* Add a subtle border between rows */
+}
+
+/* Style for rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #ddd; /* Slightly darker background color when hovering */
+}
+
+/* Style for the first cell of each row */
+td:first-child {
+  font-weight: bold; /* Make the first cell in each row bold */
+}
+
+/* Style for responsive tables */
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%; /* Ensure table still takes up the full width on small screens */
+  }
+
+  /* Stack table rows vertically on small screens */
+  tr {
+    display: block;
+    margin-bottom: 20px; /* Add some space between stacked rows */
+  }
+
+  /* Stack cells on top of each other for small screens */
+  td {
+    display: block;
+    text-align: right; /* Align text to the right */
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  /* Add labels to each cell on small screens */
+  td::before {
+    content: attr(data-label); /* Use the data-label attribute as a prefix */
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.dashboard-container {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.welcome-message {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.student-info,
+.loan-info {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.student-info h3,
+.loan-info h3 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+}
+
+.student-info p,
+.loan-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.loan-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.loan-info th,
+.loan-info td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.loan-info th {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.loan-info tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.loan-info tr:hover {
+  background-color: #ddd;
+}
+
+.loan-info td {
+  color: #333;
+}
+.loan-update {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loan-update h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loan-update form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-update label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.loan-update input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.loan-update button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.loan-update button:hover {
+  background-color: #45a049;
+}
+
+.loan-update p {
+  color: rgb(255, 174, 0);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+h3{
+  color: #4a61e2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
